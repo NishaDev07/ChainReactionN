@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Italiana&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./menuPage.css" >
+    <title>Chain Reaction</title>
+</head>
+<body>
+    <div id="Container">
+            <div id="logoBox">
+                <p>CHAIN REACTI</p>
+                <img id="ballImg" src="./redBall.png" />
+                <p>N</p>
+            </div>
+            <div id="menuBox">
+                <p>Number Of Players</p>
+                <div id="numberBoxContainer">
+                    <div class="numBox">1</div>
+                    <div class="numBox">2</div>
+                    <div class="numBox">3</div>
+                    <div class="numBox">4</div>
+                    <div class="numBox">5</div>
+                    <div class="numBox">6</div>
+                    <div class="numBox">7</div>
+                    <div class="numBox">8</div>
+                </div>
+                <div id="GridSizeBox">
+                    <p>Grid Size</p>
+                    <input type="number" min="6" max="15" placeholder="Enter Grid Size" >
+                </div>
+            </div>
+            <div id="lastBox">
+                <button class="btn">Start</button>
+                <p id="BlinkingText">Customise Names</p>
+            </div>
+    </div>
+    <footer>
+        
+    </footer>
+    <script>
+        const ColorArray = ["FF8989","BFFF6E","88C6FF","FF85B8","FFEBB5","C8AEFF","FF8C5C","FFE8E8"]
+        let numBoxArray = document.querySelectorAll(".numBox");
+
+        numBoxArray.forEach((box,index)=>{
+            box.style.backgroundColor = "#"+ColorArray[index];
+        });
+    </script>
+</body>
+</html>
