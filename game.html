@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Italiana&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./gamePage.css" >
+    <title>Chain Reaction</title>
+</head>
+<body>
+    <nav></nav>
+    <div id="Container">
+            <div id="logoBox">
+                <p id="BlinkingText" onclick="prevPage()">Go Back</p>
+                <div id="logoContainer">
+                    <p>CHAIN REACTI</p>
+                    <img id="ballImg" src="./redBall.png" />
+                    <p>N</p>
+                </div>
+            </div>
+            <p id="gameInfo">Game Starts</p>
+            <div id="gameBox">
+             
+            </div>
+            <div id="btnbox">
+                <p id="status">Turn: Player 1</p>
+                <button class="btn" id="UndoBtn">Undo</button>
+                <button class="btn" id="ResetBtn">Reset</button>
+            </div>
+    </div>
+    <script src="./game.js"></script>
+    <script>
+        function nextPage(){
+            window.location.href = "./game.html"
+        }
+
+        function prevPage(){
+            window.location.href = "./menu.html"
+        }
+    </script>
+</body>
+</html>

@@ -22,6 +22,8 @@ body{
     align-items: center;
     gap: 24px;
     height: 100%;
+    width: 100%;
+    margin: 12px 0;
 }
 
 #logoBox{
@@ -29,8 +31,17 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    gap: 60px;
     align-items: center;
     backdrop-filter: blur(1px);
+    width: 100%;
+}
+
+#logoContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 #ballImg{
@@ -49,89 +60,75 @@ body{
     cursor: pointer;
 }
 
-#menuBox{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: "Italiana", sans-serif !important;
-    font-size: 24px;
-    gap: 24px;
-}
-
-#numberBoxContainer{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(2,1fr);
-    gap: 22px;
-}
-
-.numBox{
-    font-family: "Urbanist",sans-serif;
-    font-size: 24px;
-    color: #0F1C23;
-    text-align: center;
-    padding: 13px 26px;
-    border-radius: 4px;
-    box-shadow: 0 4px 4px #122436;
-    cursor: pointer;
-}
-
-#GridSizeBox{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 24px;
-    width: 100%;
-}
-
-input{
-    background-color: #F7FFD8;
-    font-size: 12px;
-    padding: 6px 15px;
-    width: 40%;
-    color: #0F1C23;
-    border-radius: 3px;
-    outline: none;
-    border: 1px solid #0F1C23;
-}
-
-input:placeholder-shown{
-    color: #0F1C23 !important;
-}
-
-#lastBox{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 36px;
-}
-
 #BlinkingText{
-    color:#FFE68F;
-    text-shadow: 4px 4px 12px #881e98 ;
-    font-size: 24px;
+    color:#3ffdda;
+    text-shadow: 4px 4px 12px #5e6e00 ;
+    text-decoration: underline;
+    font-size: 18px;
     cursor: pointer;
-    animation: blink 1.5s infinite;
+    transform: rotate(-30deg);
 }
 
-@keyframes blink {
-    from{
-        opacity: 0;
-    }
-
-    to{
-        opacity: 1;
-    }
-}
-
-footer{
+nav{
     background: url(./footer.png);
     height: 40px;
     opacity: 1;
     backdrop-filter: blur(1px);
 }
+
+#btnbox{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+}
+
+#UndoBtn{
+    background-color: #F6C136;
+}
+
+#ResetBtn{
+    background-color: #F5B9FF;
+}
+
+#gameBox{
+    display: grid;
+    height: 75%;
+    width: 75%;
+    gap: 0; 
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(12,1fr);
+}
+
+.box{
+    background-color: #123241;
+    border: 0.5px solid #f7f7f7;
+    height: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    padding: 2px;
+}
+
+.ball{
+    width: 20%;
+    height: 20%;
+    border-radius: 100%;
+    animation: rotation 1s infinite ease-in-out;
+}
+
+@keyframes rotation {
+    from{
+        transform: rotate3d(0,1,1,0deg);
+    }
+
+    to{
+        transform: rotate3d(0,1,1,36deg);
+    }
+}  
 
 @media screen and (min-width:300px) and (max-width:760px) {
     #logoBox{
@@ -143,4 +140,9 @@ footer{
         height: 25px;
     }
 
+}
+
+#gameInfo{
+    font-size:24px;
+    font-family: 'Italiana',sans-serif;
 }

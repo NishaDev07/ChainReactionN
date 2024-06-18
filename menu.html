@@ -30,11 +30,11 @@
                 </div>
                 <div id="GridSizeBox">
                     <p>Grid Size</p>
-                    <input type="number" min="6" max="15" placeholder="Enter Grid Size" >
+                    <input id="gBox" type="number" min="6" max="15" placeholder="Enter Grid Size" >
                 </div>
             </div>
             <div id="lastBox">
-                <button class="btn">Start</button>
+                <button class="btn" onclick="nextPage()">Start</button>
                 <p id="BlinkingText">Customise Names</p>
             </div>
     </div>
@@ -44,10 +44,21 @@
     <script>
         const ColorArray = ["FF8989","BFFF6E","88C6FF","FF85B8","FFEBB5","C8AEFF","FF8C5C","FFE8E8"]
         let numBoxArray = document.querySelectorAll(".numBox");
+        let n;
 
         numBoxArray.forEach((box,index)=>{
             box.style.backgroundColor = "#"+ColorArray[index];
+            box.addEventListener("click",()=>{
+                n = index+1;
+            });
         });
+
+        function nextPage(){
+            localStorage.setItem("count",n);
+            localStorage.setItem("gridSize",document.getElementById("gBox").value);
+            window.location.href = "./game.html";
+        }
+        
     </script>
 </body>
 </html>

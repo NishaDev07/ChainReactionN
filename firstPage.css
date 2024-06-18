@@ -47,3 +47,15 @@ body{
     padding: 7px 71px;
     cursor: pointer;
 }
+
+@media screen and (min-width:300px) and (max-width:760px) {
+    #logoBox{
+        font-size: 64px;
+    }
+
+    #ballImg{
+        width: 55px;
+        height: 55px;
+    }
+
+}
